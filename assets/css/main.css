@@ -1,0 +1,75 @@
+/**************************************
+STATIC LAYOUT CSS
+**************************************/
+
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+
+header {
+	width: 960px;
+}
+
+nav, section {
+  float: left;
+}
+
+section {
+  width: 960px;
+}
+
+
+
+/**************************************
+CSS TO MAKE THE EXAMPLE LOOK PRETTY
+**************************************/
+
+*, *:before, *:after {
+
+}
+
+body {
+  background: #2980b9;
+  color: #FFF;
+  font-family: Helvetica;
+  text-align: center;
+  margin: 0;
+  margin-top: 10px;
+  overflow-x: hidden;
+}
+
+header,
+nav,
+section {
+  border: 1px solid rgba(255,255,255,0.8);
+  margin-bottom: 10px;
+  border-radius: 3px;
+  text-align: left;
+}
+
+header {
+  padding: 20px 0;
+}
+
+nav, section {
+  padding: 200px 0;
+}
+
+.atomContainer {
+  margin: 20px;
+}
+
+.atomName {
+  font-size: 18pt;
+}
+
+.atomType {
+  color: burlywood
+}
+
+.instructions {
+  text-align: center;
+  font-size: 36pt;
+  color: #ffffff;
+}
