@@ -23,61 +23,61 @@ function createWindow () {
 
   const menu = Menu.buildFromTemplate([
     {
-      label: 'Scene',
+      label: 'Menu',
       submenu: [
-        {
-          label: 'Open Scene',
-          click(){
-            dialog.showOpenDialog({
-              properties: ['openFile'],
-              title: 'Open Scene',
-              filters: [
-                { name: 'VAM Scene JSON', extensions: ['json'] }
-              ]
-            }, function( files ){
-              if(files && files.length > 0 ){
-                localFilePath = files[0];
-                win.webContents.send('scene', fs.readFileSync( files[0], 'utf-8' ) );
-              }
-            });
-          }
-        },
-        {
-          label: 'Save',
-          click(){
-            if( localSceneData === undefined ){
-              dialog.showMessageBox({
-                type: 'error',
-                message: 'No file to save. Choose Open Scene first.'
-              });
-              return;
-            }
-            fs.writeFile(localFilePath, localSceneData, function(){} );
-          }
-        },
-        {
-          label: 'Save As',
-          click(){
-            if( localSceneData === undefined ){
-              dialog.showMessageBox({
-                type: 'error',
-                message: 'No file to save. Choose Open Scene first.'
-              });
-              return;
-            }
-            dialog.showSaveDialog({
-              properties: ['openFile'],
-              title: 'Save Scene',
-              buttonLabel: 'Save As',
-              filters: [
-                { name: 'VAM Scene JSON', extensions: ['json'] }
-              ]
-            }, function( filename ){
-              console.log('writing to', filename);
-              fs.writeFile(filename, localSceneData, function(){} );
-            });
-          }
-        },
+        // {
+        //   label: 'Open Scene',
+        //   click(){
+        //     dialog.showOpenDialog({
+        //       properties: ['openFile'],
+        //       title: 'Open Scene',
+        //       filters: [
+        //         { name: 'VAM Scene JSON', extensions: ['json'] }
+        //       ]
+        //     }, function( files ){
+        //       if(files && files.length > 0 ){
+        //         localFilePath = files[0];
+        //         win.webContents.send('scene', fs.readFileSync( files[0], 'utf-8' ) );
+        //       }
+        //     });
+        //   }
+        // },
+        // {
+        //   label: 'Save',
+        //   click(){
+        //     if( localSceneData === undefined ){
+        //       dialog.showMessageBox({
+        //         type: 'error',
+        //         message: 'No file to save. Choose Open Scene first.'
+        //       });
+        //       return;
+        //     }
+        //     fs.writeFile(localFilePath, localSceneData, function(){} );
+        //   }
+        // },
+        // {
+        //   label: 'Save As',
+        //   click(){
+        //     if( localSceneData === undefined ){
+        //       dialog.showMessageBox({
+        //         type: 'error',
+        //         message: 'No file to save. Choose Open Scene first.'
+        //       });
+        //       return;
+        //     }
+        //     dialog.showSaveDialog({
+        //       properties: ['openFile'],
+        //       title: 'Save Scene',
+        //       buttonLabel: 'Save As',
+        //       filters: [
+        //         { name: 'VAM Scene JSON', extensions: ['json'] }
+        //       ]
+        //     }, function( filename ){
+        //       console.log('writing to', filename);
+        //       fs.writeFile(filename, localSceneData, function(){} );
+        //     });
+        //   }
+        // },
         {
           label: 'Exit',
           click(){

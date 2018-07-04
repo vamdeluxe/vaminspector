@@ -73,3 +73,15 @@ nav, section {
   font-size: 36pt;
   color: #ffffff;
 }
+
+.loadPerson {
+  align-content: center;
+}
+
+.personName {
+  display: block
+}
+
+.personForm {
+  float: left;
+}
