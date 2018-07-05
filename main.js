@@ -23,8 +23,20 @@ function createWindow () {
 
   const menu = Menu.buildFromTemplate([
     {
-      label: 'Menu',
+      label: 'Tools',
       submenu: [
+        {
+          label: 'Appearance Mixer',
+          click(){
+            win.loadFile('src/index.html');
+          }
+        },
+        {
+          label: 'Style Randomizer',
+          click(){
+            win.loadFile('src/stylerandomizer.html');
+          }
+        }
         // {
         //   label: 'Open Scene',
         //   click(){
@@ -78,12 +90,6 @@ function createWindow () {
         //     });
         //   }
         // },
-        {
-          label: 'Exit',
-          click(){
-            app.quit();
-          }
-        }
       ]
     },
     {

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>VAM Scene Inspector</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+  </head>
+  <body>
+    <script src="stylerandomizer.js" defer></script>
+    <div class="wrapper">
+      <section class="loadPerson">
+        <div align="left">
+          <h1>VAM Style Randomizer</h1>
+          <form id="form">
+
+
+            <fieldset>
+              <label>Person</label>
+              <button type="button" id="loadPersonButton">Load Person</button>
+              <button type="button" id="saveAsButton">Save As</button>
+            </fieldset>
+
+            <fieldset>
+              <label>Skin</label>
+              <button type="button" id="randomSkinAllButton">Random Skin ALL</button>
+              <button type="button" id="randomSkinButton">Random Skin + Makeup</button>
+              <button type="button" id="randomIrisButton">Random Iris</button>
+              <button type="button" id="randomMakeupButton">Random Makeup</button>
+            </fieldset>
+            <fieldset>
+              <label>Hair</label>
+              <button type="button" id="randomizeHairAllButton">Random Hair ALL</button>
+              <button type="button" id="randomizeHairStyleButton">Random Hair Style</button>
+              <button type="button" id="randomizeHairTextureButton">Random Hair Texture</button>
+            </fieldset>
+
+
+          </form>
+        </div>
+        <div id="workspace"></div>
+      </section>
+    </div>
+  </body>
+</html>

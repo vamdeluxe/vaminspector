@@ -1,0 +1,40 @@
+{
+  "Sim Hair": {
+    "TextureSet": ["Black", "Blonde", "Brown", "Red", "White"],
+    "id": ["SimHairMaterialScalp", "SimHairMaterial1a", "SimHairMaterial2a"]
+  },
+  "Sim Hair 2": {
+    "TextureSet": ["Black", "Blonde", "Brown", "Red", "White"],
+    "id": ["SimHairMaterialScalp", "SimHair2Material1a", "SimHair2Material2a", "SimHair2Material3a"]
+  },
+  "Ponytail": {
+    "TextureSet": ["Blonde", "Red", "Black", "LightBrown", "DarkBrown"],
+    "id": ["VictoriaElitePonytailMainTail","VictoriaElitePonytailHairScalp","VictoriaElitePonytailHairMain"]
+  },
+  "Omri Hair": {
+  },
+  "Chace Hair": {
+    "TextureSet": ["Black", "Blonde", "Brown", "Grey", "Red", "White"],
+    "id": ["ChaceHairScalp", "ChaceHair1", "ChaceHair2"]
+  },
+  "Soleil Hair": {
+    "TextureSet": ["Blonde", "Brown", "Grey", "Red", "White"],
+    "id": ["SoleilHairLayer1", "SoleilHairLayer2"]
+  },
+  "Krayon Hair": {
+    "TextureSet": ["ReddishBrown1", "ReddishBrown2", "Red", "Brown1", "Brown2", "Brown3", "Blonde1", "Blonde2", "Brown4", "Gray", "Black", "Auburn"],
+    "id": ["KrayonHairScalp", "KrayonHairMain", "KrayonHairBun1", "KrayonHairBun2"]
+  },
+  "Leslie Hair": {
+    "TextureSet": ["Blonde", "LightBrown", "ReddishBrown", "Auburn", "DarkBrown1", "DarkBrown1", "DarkBrown2", "DarkBrown3", "Black"],
+    "id": ["LeslieHairScalp", "LeslieHairMaterialMain", "LeslieHairMaterialFine"]
+  },
+  "Flirty Hair": {
+    "TextureSet": ["ReddishBrown", "Blonde", "Brown"],
+    "id": ["FlirtyHairScalp", "FlirtyHairMaterialMain"]
+  },
+  "Fancy Hair":{
+    "TextureSet": ["Set 1", "Set 2", "Set 3", "Set 4", "Set 5", "Set 6", "Set 7", "Set 8", "Set 9", "Set 10", "Set 11", "Set 12", "Set 13"],
+    "id": ["FancyHairScalp", "FancyHairMaterialMain"]
+  }
+}

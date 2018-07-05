@@ -1,6 +1,7 @@
 const dialog = require('electron').remote.dialog;
 const fs = require('fs');
 const path = require('path');
+const { findById, findByName, saveAtom } = require('./sceneutil');
 const morphList = require('./morphlist.json');
 
 const UIWorkSpace = document.querySelectorAll('#workspace')[0];
@@ -198,32 +199,7 @@ function generateMix(){
   newPerson.storables.find( findById('geometry') ).morphs = weightedMorphs;
 
   console.log('generated new person', newPerson);
-  dialog.showSaveDialog({
-    title: 'Save Person',
-    buttonLabel: 'Save As',
-    filters: [
-      { name: 'VAM Person Appearance JSON', extensions: ['json'] }
-    ]
-  }, function( filename ){
-    if( filename ){
-      console.log('writing to', filename);
-      fs.writeFile(filename, JSON.stringify( {
-        atoms: [newPerson]
-      },null,2), function(){} );
-    }
-  });
-}
-
-function findById( id ){
-  return function( entry ){
-    return entry.id === id;
-  };
-}
-
-function findByName( name ){
-  return function( entry ){
-    return entry.name === name;
-  };
+  saveAtom( newPerson );
 }
 
 function randomizeWeights(){

@@ -1,0 +1,35 @@
+{
+  "Female 1": {
+    "Face": 2
+  },
+  "Female 2": {
+    "Face": 5
+  },
+  "Female 3": {
+    "Face": 5
+  },
+  "Female 4": {
+    "Face": 5
+  },
+  "Female 5": {
+    "Face": 5
+  },
+  "Female 6": {
+    "Face": 3
+  },
+  "Female 10": {
+    "Face": 12,
+    "Lips": 11,
+    "Nails": 9
+  },
+  "Female 11": {
+    "Face": 9,
+    "Lips": 8
+  },
+  "Female 13": {
+    "Face": 4
+  },
+  "Female 14": {
+    "Face": 5
+  }
+}
