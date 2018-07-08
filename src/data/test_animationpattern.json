@@ -1,0 +1,227 @@
+[
+  {
+    "id": "AnimationStep#2",
+    "on": "true",
+    "type": "AnimationStep",
+    "parentAtom": "AnimationPattern",
+    "position": {
+      "x": "1.8",
+      "y": "2.8",
+      "z": "0"
+    },
+    "rotation": {
+      "x": "0",
+      "y": "0",
+      "z": "0"
+    },
+    "containerPosition": {
+      "x": "1.2",
+      "y": "2.03606",
+      "z": "0"
+    },
+    "containerRotation": {
+      "x": "0",
+      "y": "0",
+      "z": "0"
+    },
+    "storables": [
+      {
+        "id": "Step",
+        "transitionToTime": "3"
+      },
+      {
+        "id": "controlPointIn",
+        "position": {
+          "x": "1.2",
+          "y": "2.03606",
+          "z": "0"
+        },
+        "rotation": {
+          "x": "0",
+          "y": "0",
+          "z": "0"
+        },
+        "positionState": "On",
+        "rotationState": "Off"
+      },
+      {
+        "id": "controlPointOut",
+        "position": {
+          "x": "1.2",
+          "y": "2.03606",
+          "z": "0"
+        },
+        "rotation": {
+          "x": "0",
+          "y": "0",
+          "z": "0"
+        },
+        "positionState": "On",
+        "rotationState": "Off"
+      },
+      {
+        "id": "control",
+        "position": {
+          "x": "1.2",
+          "y": "2.03606",
+          "z": "0"
+        },
+        "rotation": {
+          "x": "0",
+          "y": "0",
+          "z": "0"
+        },
+        "positionState": "On",
+        "rotationState": "On"
+      }
+    ]
+  },
+  {
+    "id": "AnimationStep",
+    "on": "true",
+    "type": "AnimationStep",
+    "parentAtom": "AnimationPattern",
+    "position": {
+      "x": "1.8",
+      "y": "2.8",
+      "z": "0"
+    },
+    "rotation": {
+      "x": "0",
+      "y": "0",
+      "z": "0"
+    },
+    "containerPosition": {
+      "x": "1",
+      "y": "2.03606",
+      "z": "0"
+    },
+    "containerRotation": {
+      "x": "0",
+      "y": "0",
+      "z": "0"
+    },
+    "storables": [
+      {
+        "id": "Step",
+        "transitionToTime": "0"
+      },
+      {
+        "id": "controlPointIn",
+        "position": {
+          "x": "1",
+          "y": "2.03606",
+          "z": "0"
+        },
+        "rotation": {
+          "x": "0",
+          "y": "0",
+          "z": "0"
+        },
+        "positionState": "On",
+        "rotationState": "Off"
+      },
+      {
+        "id": "controlPointOut",
+        "position": {
+          "x": "1",
+          "y": "2.03606",
+          "z": "0"
+        },
+        "rotation": {
+          "x": "0",
+          "y": "0",
+          "z": "0"
+        },
+        "positionState": "On",
+        "rotationState": "Off"
+      },
+      {
+        "id": "control",
+        "position": {
+          "x": "1",
+          "y": "2.03606",
+          "z": "0"
+        },
+        "rotation": {
+          "x": "0",
+          "y": "0",
+          "z": "0"
+        },
+        "positionState": "On",
+        "rotationState": "On"
+      }
+    ]
+  },
+  {
+    "id": "AnimationPattern",
+    "on": "true",
+    "type": "AnimationPattern",
+    "position": {
+      "x": "1.1",
+      "y": "2.8",
+      "z": "0"
+    },
+    "rotation": {
+      "x": "0",
+      "y": "0",
+      "z": "0"
+    },
+    "containerPosition": {
+      "x": "1.1",
+      "y": "2.03606",
+      "z": "0"
+    },
+    "containerRotation": {
+      "x": "0",
+      "y": "0",
+      "z": "0"
+    },
+    "storables": [
+      {
+        "id": "AnimationPattern",
+        "loop": "false",
+        "autoPlay": "false",
+        "currentTime": "3",
+        "steps": [
+          "AnimationStep",
+          "AnimationStep#2"
+        ],
+        "triggers": [
+          {
+            "displayName": "SFX",
+            "startActions": [
+              {
+                "receiverAtom": "Person",
+                "receiver": "HeadAudioSource",
+                "receiverTargetName": "PlayNow",
+                "audioClipType": "URL",
+                "audioClipCategory": "web",
+                "audioClip": "JesseMoan12.wav"
+              }
+            ],
+            "transitionActions": [],
+            "endActions": [],
+            "startTime": "0",
+            "endTime": "0.6773882"
+          }
+        ]
+      },
+      {
+        "id": "control",
+        "position": {
+          "x": "1.1",
+          "y": "2.03606",
+          "z": "0"
+        },
+        "rotation": {
+          "x": "0",
+          "y": "0",
+          "z": "0"
+        },
+        "positionState": "On",
+        "rotationState": "On"
+      }
+    ]
+  }
+]

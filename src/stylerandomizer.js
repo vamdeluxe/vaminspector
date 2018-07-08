@@ -4,10 +4,10 @@ const path = require('path');
 const { findById, saveAtom } = require('./sceneutil');
 
 
-const defaultIris = require('./storable_iris.json');
-const defaultSkin = require('./storable_skin.json');
-const makeupManifest = require('./makeup_manifest.json');
-const hairManifest = require('./hair_manifest.json');
+const defaultIris = require('./data/storable_iris.json');
+const defaultSkin = require('./data/storable_skin.json');
+const makeupManifest = require('./data/makeup_manifest.json');
+const hairManifest = require('./data/hair_manifest.json');
 
 
 document.querySelector('#loadPersonButton').addEventListener( 'click', openDialog );

@@ -1,0 +1,55 @@
+{
+  "id": "CollisionTrigger",
+  "on": "true",
+  "type": "CollisionTrigger",
+  "position": {
+    "x": "0",
+    "y": "0",
+    "z": "0"
+  },
+  "rotation": {
+    "x": "0",
+    "y": "0",
+    "z": "0"
+  },
+  "containerPosition": {
+    "x": "0",
+    "y": "0",
+    "z": "0"
+  },
+  "containerRotation": {
+    "x": "0",
+    "y": "0",
+    "z": "0"
+  },
+  "storables": [
+    {
+      "id": "scale",
+      "scale": "0.5"
+    },
+    {
+      "id": "Trigger",
+      "trigger": {
+        "displayName": "",
+        "startActions": [],
+        "transitionActions": [],
+        "endActions": []
+      }
+    },
+    {
+      "id": "control",
+      "position": {
+        "x": "0",
+        "y": "0",
+        "z": "0.0"
+      },
+      "rotation": {
+        "x": "0",
+        "y": "0",
+        "z": "0"
+      },
+      "positionState": "On",
+      "rotationState": "On"
+    }
+  ]
+}

@@ -2,7 +2,7 @@ const dialog = require('electron').remote.dialog;
 const fs = require('fs');
 const path = require('path');
 const { findById, findByName, saveAtom } = require('./sceneutil');
-const morphList = require('./morphlist.json');
+const morphList = require('./data/morphlist.json');
 
 const UIWorkSpace = document.querySelectorAll('#workspace')[0];
 const UILoadPersonButton = document.querySelectorAll('#loadPersonButton')[0];

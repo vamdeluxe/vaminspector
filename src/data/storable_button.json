@@ -1,0 +1,76 @@
+{
+  "id": "UIButton",
+  "on": "true",
+  "type": "UIButton",
+  "position": {
+    "x": "0",
+    "y": "0",
+    "z": "0"
+  },
+  "rotation": {
+    "x": "0",
+    "y": "0",
+    "z": "0"
+  },
+  "containerPosition": {
+    "x": "0",
+    "y": "0",
+    "z": "0"
+  },
+  "containerRotation": {
+    "x": "0",
+    "y": "0",
+    "z": "0"
+  },
+  "storables": [
+    {
+      "id": "Text",
+      "fontSize": "100",
+      "text": "Button Text"
+    },
+    {
+      "id": "Canvas",
+      "xSize": "841"
+    },
+    {
+      "id": "ButtonColor",
+      "color": {
+        "h": "0",
+        "s": "0",
+        "v": "0.1529645"
+      }
+    },
+    {
+      "id": "TextColor",
+      "color": {
+        "h": "0",
+        "s": "0",
+        "v": "1"
+      }
+    },
+    {
+      "id": "Trigger",
+      "trigger": {
+        "displayName": "",
+        "startActions": [],
+        "transitionActions": [],
+        "endActions": []
+      }
+    },
+    {
+      "id": "control",
+      "position": {
+        "x": "0",
+        "y": "0",
+        "z": "0"
+      },
+      "rotation": {
+        "x": "0",
+        "y": "0",
+        "z": "0"
+      },
+      "positionState": "On",
+      "rotationState": "On"
+    }
+  ]
+}

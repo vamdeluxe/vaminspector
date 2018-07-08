@@ -1,0 +1,77 @@
+{
+  "id": "AnimationStep",
+  "on": "true",
+  "type": "AnimationStep",
+  "parentAtom": "",
+  "position": {
+    "x": "0",
+    "y": "0",
+    "z": "0"
+  },
+  "rotation": {
+    "x": "0",
+    "y": "0",
+    "z": "0"
+  },
+  "containerPosition": {
+    "x": "0",
+    "y": "0",
+    "z": "0"
+  },
+  "containerRotation": {
+    "x": "0",
+    "y": "0",
+    "z": "0"
+  },
+  "storables": [
+    {
+      "id": "Step",
+      "transitionToTime": "0"
+    },
+    {
+      "id": "controlPointIn",
+      "position": {
+        "x": "0",
+        "y": "0",
+        "z": "0"
+      },
+      "rotation": {
+        "x": "0",
+        "y": "0",
+        "z": "0"
+      },
+      "positionState": "On",
+      "rotationState": "Off"
+    },
+    {
+      "id": "controlPointOut",
+      "position": {
+        "x": "0",
+        "y": "0",
+        "z": "0"
+      },
+      "rotation": {
+        "x": "0",
+        "y": "0",
+        "z": "0"
+      },
+      "positionState": "On",
+      "rotationState": "Off"
+    },
+    {
+      "id": "control",
+      "position": {
+        "x": "0",
+        "y": "0",
+        "z": "0"
+      },
+      "rotation": {
+        "x": "0",
+        "y": "0",
+        "z": "0"
+      },
+      "positionState": "On",
+      "rotationState": "On"
+    }
+  ]
+}

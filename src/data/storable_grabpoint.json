@@ -1,0 +1,42 @@
+{
+  "id": "GrabPoint",
+  "on": "true",
+  "type": "GrabPoint",
+  "position": {
+    "x": "0",
+    "y": "0",
+    "z": "0"
+  },
+  "rotation": {
+    "x": "0",
+    "y": "0",
+    "z": "0"
+  },
+  "containerPosition": {
+    "x": "0",
+    "y": "0",
+    "z": "0"
+  },
+  "containerRotation": {
+    "x": "0",
+    "y": "0",
+    "z": "0"
+  },
+  "storables": [
+    {
+      "id": "control",
+      "position": {
+        "x": "0",
+        "y": "0",
+        "z": "0"
+      },
+      "rotation": {
+        "x": "0",
+        "y": "0",
+        "z": "0"
+      },
+      "positionState": "On",
+      "rotationState": "On"
+    }
+  ]
+}

@@ -28,13 +28,19 @@ function createWindow () {
         {
           label: 'Appearance Mixer',
           click(){
-            win.loadFile('src/index.html');
+            win.loadFile('src/mixer.html');
           }
         },
         {
           label: 'Style Randomizer',
           click(){
             win.loadFile('src/stylerandomizer.html');
+          }
+        },
+        {
+          label: 'Emotion Engine',
+          click(){
+            win.loadFile('src/emotionengine.html');
           }
         }
         // {

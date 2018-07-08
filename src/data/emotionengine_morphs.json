@@ -1,0 +1,129 @@
+{
+  "eyes": [
+    {
+      "name": "Brow Inner Up",
+      "value": "0",
+      "animatable": "true"
+    },
+    {
+      "name": "Brow Outer Down",
+      "value": "0",
+      "animatable": "true"
+    },
+    {
+      "name": "Brow Squeeze",
+      "value": "0",
+      "animatable": "true"
+    },
+    {
+      "name": "Eyes Closed",
+      "value": "0",
+      "animatable": "true"
+    },
+    {
+      "name": "Eyes Squint",
+      "value": "0",
+      "animatable": "true"
+    },
+    {
+      "name": "AA",
+      "value": "0",
+      "animatable": "true"
+    },
+    {
+      "name": "EH",
+      "value": "0",
+      "animatable": "true"
+    },
+    {
+      "name": "ER",
+      "value": "0",
+      "animatable": "true"
+    },
+    {
+      "name": "F",
+      "value": "0",
+      "animatable": "true"
+    },
+    {
+      "name": "IH",
+      "value": "0",
+      "animatable": "true"
+    },
+    {
+      "name": "IY",
+      "value": "0",
+      "animatable": "true"
+    },
+    {
+      "name": "K",
+      "value": "0",
+      "animatable": "true"
+    },
+    {
+      "name": "L",
+      "value": "0",
+      "animatable": "true"
+    },
+    {
+      "name": "M",
+      "value": "0",
+      "animatable": "true"
+    },
+    {
+      "name": "OW",
+      "value": "0",
+      "animatable": "true"
+    },
+    {
+      "name": "S",
+      "value": "0",
+      "animatable": "true"
+    },
+    {
+      "name": "SH",
+      "value": "0",
+      "animatable": "true"
+    },
+    {
+      "name": "T",
+      "value": "0",
+      "animatable": "true"
+    },
+    {
+      "name": "TH",
+      "value": "0",
+      "animatable": "true"
+    },
+    {
+      "name": "UW",
+      "value": "0",
+      "animatable": "true"
+    },
+    {
+      "name": "W",
+      "value": "0",
+      "animatable": "true"
+    },
+    {
+      "name": "Mouth Narrow",
+      "value": "0",
+      "animatable": "true"
+    },
+    {
+      "name": "Mouth Smile",
+      "value": "0",
+      "animatable": "true"
+    },
+    {
+      "name": "Mouth Smile Open",
+      "value": "0",
+      "animatable": "true"
+    },
+    {
+      "name": "Mouth Simple Smile",
+      "value": "0",
+      "animatable": "true"
+    }
+  ]
+}

@@ -2,25 +2,24 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>VAM Scene Inspector</title>
+    <title>VAM Inspector</title>
     <link rel="stylesheet" href="../assets/css/main.css">
   </head>
   <body>
     <script src="mixer.js" defer></script>
-    <div class="wrapper">
-      <section class="loadPerson">
-        <div align="center">
-          <h1>VAM Appearance Mixer</h1>
-          <form id="form">
-            <button type="button" id="loadPersonButton">Load Person</button>
-            <button type="button" id="clearPeopleButton">Clear List</button>
-            <button type="button" id="randomizeWeightsButton">Randomize Weights</button>
-            <button type="button" id="mixPeopleButton">Generate Mix</button>
-          </form>
-          <div id="spacer">&nbsp;</div>
-          <div id="workspace"></div>
-        </div>
-      </section>
+    <div class="wrapper" align="center">
+      <div class="mainMenu">
+        <h1>Select A Tool</h1>
+        <form action="mixer.html" class="mainMenuItem">
+          <button>Appearance Mixer</button>
+        </form>
+        <form action="stylerandomizer.html" class="mainMenuItem">
+          <button>Style Randomizer</button>
+        </form>
+        <form action="emotionengine.html" class="mainMenuItem">
+          <button>Emotion Engine</button>
+        </form>
+      </div>
     </div>
   </body>
 </html>

@@ -1,0 +1,89 @@
+{
+  "upperFace": [
+    {
+      "name": "Neutral",
+      "morphs": {}
+    },
+    {
+      "name": "Ecstasy",
+      "morphs": {
+        "Brow Squeeze": 1,
+        "Brow Inner Up": 1,
+        "Brow Outer Down": 1,
+        "Eyes Squint": 1
+      }
+    },
+    {
+      "name": "Squint",
+      "morphs": {
+        "Eyes Squint": 1
+      }
+    },
+    {
+      "name": "Closed",
+      "morphs": {
+        "Eyes Closed": 1
+      }
+    }
+  ],
+  "lowerFace": [
+    {
+      "name": "Neutral",
+      "morphs": {}
+    },
+    {
+      "name": "AA Viseme",
+      "morphs": {
+        "AA": 1
+      }
+    },
+    {
+      "name": "EH Viseme",
+      "morphs": {
+        "EH": 1
+      }
+    },
+    {
+      "name": "OW Viseme",
+      "morphs": {
+        "OW": 0.7
+      }
+    },
+    {
+      "name": "M Viseme",
+      "morphs": {
+        "M": 1
+      }
+    },
+    {
+      "name": "SH Viseme",
+      "morphs": {
+        "SH": 1
+      }
+    },
+    {
+      "name": "Mouth Narrow",
+      "morphs": {
+        "Mouth Narrow": 1
+      }
+    },
+    {
+      "name": "Mouth Smile",
+      "morphs": {
+        "Mouth Smile": 1
+      }
+    },
+    {
+      "name": "Mouth Smile Open",
+      "morphs": {
+        "Mouth Smile Open": 1
+      }
+    },
+    {
+      "name": "Mouth Simple Smile",
+      "morphs": {
+        "Mouth Simple Smile": 1
+      }
+    }
+  ]
+}

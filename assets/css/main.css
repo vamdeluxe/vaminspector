@@ -30,19 +30,20 @@ CSS TO MAKE THE EXAMPLE LOOK PRETTY
 }
 
 body {
-  background: #2980b9;
-  color: #FFF;
+  background: #272d33;
+  color: rgb(220, 231, 255);
   font-family: Helvetica;
   text-align: center;
   margin: 0;
   margin-top: 10px;
   overflow-x: hidden;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
 }
 
 header,
 nav,
 section {
-  border: 1px solid rgba(255,255,255,0.8);
   margin-bottom: 10px;
   border-radius: 3px;
   text-align: left;
@@ -52,8 +53,83 @@ header {
   padding: 20px 0;
 }
 
-nav, section {
-  padding: 200px 0;
+label {
+  font-size: 7pt;
+  color: rgb(145, 145, 145);
+  display: block;
+  margin: 2px;
+}
+
+h1 {
+  font-size: 24pt;
+  letter-spacing: 0.4em;
+  word-spacing: -0.2em;
+  text-transform: uppercase;
+  text-shadow: 0px 6px 10px #1a191d ;
+}
+
+button {
+  background-color: #1a191d;
+  color: #e0eaf5;
+  border-color: #575757;
+  border-radius: 7px;
+  padding: 5px;
+  text-transform: uppercase;
+  font-size: 9pt;
+}
+
+button:focus {outline:0;}
+
+button:disabled,
+button[disabled]{
+  background-color: #424146;
+  color: #959faa;
+}
+
+
+select{
+  font-size:12px;
+  background-color: #000;
+  color: #fff;
+  min-width: 200px;
+  padding: 2px;
+}
+
+fieldset{
+  margin: 16px;
+}
+
+output {
+  font-size: 7pt;
+  color: rgb(216, 216, 216);
+  float: right;
+  position: relative;
+  top: 6px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  min-width: 200px;
+  height: 4px;
+  border-radius: 3px;
+  background: #161616;
+  outline: none;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgb(127, 255, 68);
+  cursor: pointer;
+}
+
+.mainMenuItem {
+  margin: 20px;
 }
 
 .atomContainer {
@@ -79,7 +155,10 @@ nav, section {
 }
 
 .personName {
-  display: block
+  display: block;
+  font-size: 15pt;
+  width: 100%;
+  border: #575757 1px solid;
 }
 
 .personForm {
@@ -90,4 +169,70 @@ nav, section {
   margin: auto;
   width: 50%;
   padding: 10px;
+}
+
+audio::-webkit-media-controls-panel {
+  width: 80%;
+  background-color: #2b333b;
+  color: #fff;
+  border-top-right-radius: 0.5em 0.5em;
+  border-bottom-right-radius: 1em 0.7em;
+}
+
+audio::-webkit-media-controls-play-button {
+  color: #fff;
+}
+
+audio::-webkit-media-controls-mute-button {
+  display: none;
+}
+
+audio::-webkit-media-controls-volume-slider-container {
+  display: none;
+}
+
+audio::-webkit-media-controls-volume-slider {
+  display: none;
+}
+
+.settingBlock {
+  font-size: 10pt;
+  margin: 7px;
+  display: block;
+}
+
+.assetIdentifier {
+  font-size: 16pt;
+  overflow: hidden;
+  margin-bottom: 4px;
+  color: rgb(40, 171, 231);
+}
+
+.audioList {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.audioClipForm {
+  margin: 12px;
+  padding: 8px;
+  border: 1px solid rgba(3, 129, 187, 0.8);
+  background-color:  #2b333b;
+  width: 250px;
+  height: 280px;
+}
+
+.assetContainer {
+
+}
+
+#topMenu {
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
 }
