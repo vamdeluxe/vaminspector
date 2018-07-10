@@ -107,6 +107,33 @@ output {
   top: 6px;
 }
 
+table {
+  width:80%;
+}
+
+th, td {
+  text-align: left;
+  padding: 4px 6px;
+  font-size: 9pt;
+}
+
+th {
+  background-color: #959faa;
+  color: #000;
+}
+
+th:hover{
+  background-color: #e0eaf5;
+}
+
+tr:nth-child(even) {
+  background-color: #333336
+}
+
+tr:nth-child(odd) {
+  background-color: #212127
+}
+
 .slider {
   -webkit-appearance: none;
   min-width: 200px;
@@ -159,6 +186,7 @@ output {
   font-size: 15pt;
   width: 100%;
   border: #575757 1px solid;
+  background-color: #161616;
 }
 
 .personForm {
@@ -233,6 +261,38 @@ audio::-webkit-media-controls-volume-slider {
 #topMenu {
   display: flex;
   justify-content: center;
-
   align-items: center;
+  width:100%;
+}
+
+.spreadContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+}
+
+.contentFrame {
+  width:300px;
+  height:300px;
+  border: 1px #2b333b solid;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+#centerFlowBox {
+  background-image: url('../images/rightarrow.png');
+  background-repeat: no-repeat;
+}
+
+.biggerLabel {
+  font-size: 10pt;
+  color: white;
+  text-transform: uppercase;
+}
+
+.clickable {
+  cursor: pointer;
 }

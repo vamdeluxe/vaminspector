@@ -41,14 +41,26 @@ function saveAtom( atom ){
   });
 }
 
-function sortAtomsByType( scene ){
-  scene.atoms.sort( function( a, b ){
-    return a.type > b.type && a.id > b.id;
-  });
+function sortAtomsBy( priority ){
+  return function( a, b ){
+
+    let idComparison = a.id.localeCompare( b.id )
+    let typeComparison = a.type.localeCompare( b.type );
+
+    if( priority === 'id' ){
+      idComparison *= 2;
+    }
+
+    if( priority === 'type' ){
+      typeComparison *= 2;
+    }
+
+    return idComparison + typeComparison;
+  }
 }
 
 function saveScene( scene, callback ){
-  sortAtomsByType( scene );
+  scene.atoms = scene.atoms.sort( sortAtomsBy('type') );
   saveJSONDialog( function( filename ){
     if( filename ){
       console.log('writing to', filename);
@@ -100,6 +112,10 @@ function getVAMSavePaths( filePath ){
 
 function loadSceneFile( filePath ){
   return JSON.parse( fs.readFileSync( filePath, 'utf-8' ) );
+}
+
+function loadFirstAtom( filePath ){
+  return JSON.parse( fs.readFileSync( filePath, 'utf-8' ) ).atoms[0];
 }
 
 function deepClone( obj ){
@@ -206,6 +222,7 @@ module.exports = {
   openFiles,
   getVAMSavePaths,
   loadSceneFile,
+  loadFirstAtom,
   deepClone,
   replaceStorable,
   replaceMorph,
@@ -215,5 +232,6 @@ module.exports = {
   removeAtomsById,
   makeAtomEditOnly,
   copyFile,
-  makeParentLink
+  makeParentLink,
+  sortAtomsBy
 };

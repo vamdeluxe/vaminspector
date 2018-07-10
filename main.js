@@ -26,15 +26,27 @@ function createWindow () {
       label: 'Tools',
       submenu: [
         {
-          label: 'Appearance Mixer',
+          label: 'Sort Atoms',
+          click(){
+            win.loadFile('src/sorter.html');
+          }
+        },
+        {
+          label: 'Mix Appearance',
           click(){
             win.loadFile('src/mixer.html');
           }
         },
         {
-          label: 'Style Randomizer',
+          label: 'Randomize Style',
           click(){
             win.loadFile('src/stylerandomizer.html');
+          }
+        },
+        {
+          label: 'Swap Head / Body',
+          click(){
+            win.loadFile('src/bodyswapper.html');
           }
         },
         {
