@@ -161,7 +161,7 @@ PageUtil.UIButtonClicked('#saveSceneButton', function(){
       const fileName = SceneUtil.getFileName( filePath );
       return {
         path: filePath,
-        settings: PageUtil.settingsFromForm( document.querySelector('#settings_' + fileName))
+        settings: PageUtil.settingsFromForm( document.querySelector('#settings_' + CSS.escappe(fileName)))
       };
     })
   };
@@ -391,7 +391,7 @@ function generateAnimationPattern( atoms, audioFilePath, index ){
 
   const fileName = SceneUtil.getFileName(audioFilePath);
 
-  const animationSettings = PageUtil.settingsFromForm( document.querySelector('#settings_'+fileName ) );
+  const animationSettings = PageUtil.settingsFromForm( document.querySelector('#settings_'+CSS.escapefileName) ) );
   console.log(animationSettings);
 
   const animPattern = SceneUtil.deepClone( defaultAnimationPattern );
