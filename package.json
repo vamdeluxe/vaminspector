@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "css.escape": "^1.5.1",
     "electron": "2.0.3",
     "electron-packager": "^12.1.0"
   }
