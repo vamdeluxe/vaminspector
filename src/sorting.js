@@ -32,6 +32,10 @@ function renderTable( atoms ){
   });
 }
 
+// document.querySelector('#loadScene').addEventListener('change', function(){
+//   console.log( e.target );
+// });
+
 PageUtil.UIButtonClicked('#loadScene', function(){
   SceneUtil.openFiles({ multiSelection: false })
   .then( function( files ){

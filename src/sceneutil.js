@@ -1,4 +1,3 @@
-const dialog = require('electron').remote.dialog;
 const path = require('path');
 const fs = require('fs');
 
@@ -21,7 +20,7 @@ function findByName( name ){
 }
 
 function saveJSONDialog( fn ){
-  dialog.showSaveDialog({
+  require('electron').remote.dialog.showSaveDialog({
     title: 'Save',
     buttonLabel: 'Save As',
     filters: [
@@ -76,7 +75,7 @@ function saveScene( scene, callback ){
 function openFiles( options = {} ){
   const { multiSelection = true, extensions = ['json','jpg'] } = options;
   return new Promise(function( resolve, reject ){
-    dialog.showOpenDialog({
+    require('electron').remote.dialog.showOpenDialog({
       properties: ['openFile', multiSelection ? 'multiSelections' : ''],
       title: 'Open',
       filters: [

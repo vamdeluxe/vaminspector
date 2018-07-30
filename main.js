@@ -32,9 +32,27 @@ function createWindow () {
           }
         },
         {
+          label: 'Disable All Interactive On Play',
+          click(){
+            win.loadFile('src/setinteractive.html');
+          }
+        },
+        {
           label: 'Mix Appearance',
           click(){
             win.loadFile('src/mixer.html');
+          }
+        },
+        {
+          label: 'In-Game Mix Appearance',
+          click(){
+            win.loadFile('src/mixer-ingame.html');
+          }
+        },
+        {
+          label: 'Test In-Game Mix Slider',
+          click(){
+            win.loadFile('src/mixer-ingame-slider.html');
           }
         },
         {
@@ -164,3 +182,59 @@ app.on('activate', () => {
     createWindow()
   }
 })
+
+const express = require('express');
+const server = express();
+
+
+const Mixer = require('./mixer');
+const SceneUtil = require('./src/sceneutil');
+const Store = require('electron-store');
+const store = new Store();
+
+server.use(express.static('src'));
+server.get('/', function( request, response ){
+  response.sendFile( 'index.html' );
+});
+
+server.listen(3000, () => console.log('In-Game WebServer 3000!'));
+
+const WebSocket = require('ws');
+
+const wss = new WebSocket.Server({ port: 8080 });
+
+let mixValue = 0.5;
+
+wss.on('connection', function connection(ws) {
+
+  ws.on('message', function incoming(message) {
+    try {
+      const json = JSON.parse(message);
+      mixValue = parseFloat(json.mix);
+
+      let mixerPath = store.get('mixerPath');
+      if(mixerPath === undefined){
+        console.warn('mixer path not set');
+        return;
+      }
+
+      scene = SceneUtil.loadSceneFile( mixerPath );
+      if( scene === undefined ){
+        console.warn('could not load scene');
+        return;
+      }
+
+      console.log(mixValue);
+      const resultScene = Mixer( scene, mixValue );
+      fs.writeFile(mixerPath, JSON.stringify( resultScene,null,2), function(){} );
+    }
+    catch(e){
+      console.error(e);
+    };
+  });
+
+  ws.send(JSON.stringify({
+    action: 'mixer',
+    mix: mixValue
+  }));
+});

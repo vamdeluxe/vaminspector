@@ -86,6 +86,21 @@ button[disabled]{
   color: #959faa;
 }
 
+input[type="file"] {
+  background-color: #1a191d;
+  color: #e0eaf5;
+  border-color: #575757;
+  border-radius: 7px;
+  padding: 5px;
+  text-transform: uppercase;
+  font-size: 9pt;
+}
+
+input[type="file"][disabled] {
+  background-color: #424146;
+  color: #959faa;
+}
+
 
 select{
   font-size:12px;
@@ -293,6 +308,40 @@ audio::-webkit-media-controls-volume-slider {
   text-transform: uppercase;
 }
 
+.instructions {
+  font-size: 16pt;
+  padding: 16px;
+  letter-spacing: 0.1em;
+  color: white;
+}
+
 .clickable {
+  cursor: pointer;
+}
+
+.verticalAlign {
+  position: relative;
+  top: 100%;
+  transform: translateY(100%);
+}
+
+.bigSlider {
+  -webkit-appearance: none;
+  height: 16px;
+  border-radius: 3px;
+  background: #161616;
+  outline: none;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  margin: 40px;
+}
+
+.bigSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgb(127, 255, 68);
   cursor: pointer;
 }
