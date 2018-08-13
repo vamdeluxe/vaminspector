@@ -1,0 +1,52 @@
+{
+    "id": "AtomNameHere",
+    "on": "true",
+    "type": "VariableTrigger",
+    "position": {
+        "x": "1",
+        "y": "1",
+        "z": "0.3"
+    },
+    "rotation": {
+        "x": "0",
+        "y": "0",
+        "z": "0"
+    },
+    "containerPosition": {
+        "x": "3.131952",
+        "y": "1.365699",
+        "z": "2.159574"
+    },
+    "containerRotation": {
+        "x": "0",
+        "y": "0",
+        "z": "0"
+    },
+    "storables": [
+        {
+            "id": "Trigger",
+            "value": "0",
+            "trigger": {
+                "displayName": "",
+                "startActions": [],
+                "transitionActions": [],
+                "endActions": []
+            }
+        },
+        {
+            "id": "control",
+            "position": {
+                "x": "3.131952",
+                "y": "1.365699",
+                "z": "2.159574"
+            },
+            "rotation": {
+                "x": "0",
+                "y": "0",
+                "z": "0"
+            },
+            "positionState": "On",
+            "rotationState": "On"
+        }
+    ]
+}

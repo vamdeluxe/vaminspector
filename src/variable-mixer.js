@@ -1,7 +1,8 @@
 const dialog = require('electron').remote.dialog;
 const fs = require('fs');
 const path = require('path');
-const morphList = require('./data/morphlist.json');
+const varTrigger = require('./data/variable_trigger.json');
+const userSaveScene = require('./sceneutil').saveScene;
 
 const gel = s => document.getElementById(s);
 const UIScene = gel('loadScene');
@@ -27,23 +28,74 @@ function loadLook() {
 }
 
 function saveScene() {
+  let startMorphs = getMorphs(findPerson(model.scene));
+  const endMorphs = getMorphs(findPerson(model.look));
+
+  let morphNames = new Set();
+  startMorphs.forEach(m => morphNames.add(m.name));
+  endMorphs.forEach(m => morphNames.add(m.name));
+
+  let pairs = [];
+  for (const name of morphNames) {
+    pairs.push({
+      start: startMorphs.find(m => m.name === name),
+      end: endMorphs.find(m => m.name === name)
+    });
+  }
+
+  const val = m => m && m.value || '0';
+  const name = (m1, m2) => (m1 || m2).name;
+  let transitions = pairs.map(p => createTransition(name(p.start, p.end), val(p.start), val(p.end)));
+  model.scene.atoms.push(variableTrigger('LookTransform', transitions));
+
+  transitions.forEach(t => {
+    let morph = startMorphs.find(m => m.name === t.receiverTargetName);
+    if (morph)
+      morph.animatable = 'true';
+    else
+      startMorphs.push({ name: t.receiverTargetName, animatable: 'true' });
+  });
+  console.log(transitions);
+
+  userSaveScene(model.scene);
 }
 
 // ### Utilities ###
 
 function vamFile(file) {
-  const parsedPath = path.parse(file);
+  let parsedPath = path.parse(file);
+  parsedPath.base = undefined;
   return {
     data: path.format({ ...parsedPath, ext: '.json' }),
     image: path.format({ ...parsedPath, ext: '.jpg' })
   };
 }
 
-/**
- * Opens a file dialog and once a file is selected reads the content as json
- * and calls the handler with it.
- * @param {objectHandler} handler - Handles the json object
- */
+function findPerson(scene) {
+  return scene.atoms.find(a => a.id === 'Person');
+}
+
+function getMorphs(person) {
+  return person.storables.find(s => s.id === 'geometry').morphs;
+}
+
+function variableTrigger(id, transitions) {
+  let vt = Object.assign({ id }, varTrigger);
+  vt.storables[0].trigger.transitionActions = transitions;
+  return vt;
+}
+
+function createTransition(target, start, end) {
+  return {
+    receiverAtom: 'Person',
+    receiver: 'geometry',
+    receiverTargetName: target,
+    startValue: start,
+    endValue: end,
+    startWithCurrentVal: 'true'
+  };
+}
+
 function userOpenJsonFile(handler) {
   dialog.showOpenDialog({
     title: 'Open Scene',
@@ -53,14 +105,8 @@ function userOpenJsonFile(handler) {
     ]
   }, function (files) {
     const file = vamFile(files[0]);
-    fs.readFile(file.data, 'utf-8', (err, data) => handler(JSON.parse(data)));
+    fs.readFile(file.data, 'utf-8', (_, data) => handler(JSON.parse(data)));
   });
 }
-
-/**
- * Object handler
- * @callback objectHandler
- * @param {Object} obj - Object to handle
- */
 
 // ###^#########^###
