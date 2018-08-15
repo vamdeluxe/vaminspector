@@ -72,6 +72,12 @@ function createWindow () {
           click(){
             win.loadFile('src/emotionengine.html');
           }
+        },
+        {
+          label: 'Variable Mixer',
+          click(){
+            win.loadFile('src/variable-mixer.html');
+          }
         }
         // {
         //   label: 'Open Scene',
