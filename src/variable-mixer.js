@@ -2,7 +2,7 @@ const dialog = require('electron').remote.dialog;
 const fs = require('fs');
 const path = require('path');
 const varTrigger = require('./data/variable_trigger.json');
-const userSaveScene = require('./sceneutil').saveScene;
+const { saveScene: userSaveScene, deepClone } = require('./sceneutil');
 
 const gel = s => document.getElementById(s);
 const UIScene = gel('loadScene');
@@ -28,7 +28,8 @@ function loadLook() {
 }
 
 function saveScene() {
-  let startMorphs = getMorphs(findPerson(model.scene));
+  let scene = deepClone(model.scene);
+  let startMorphs = getMorphs(findPerson(scene));
   const endMorphs = getMorphs(findPerson(model.look));
 
   let morphNames = new Set();
@@ -46,7 +47,7 @@ function saveScene() {
   const val = m => m && m.value || '0';
   const name = (m1, m2) => (m1 || m2).name;
   let transitions = pairs.map(p => createTransition(name(p.start, p.end), val(p.start), val(p.end)));
-  model.scene.atoms.push(variableTrigger('LookTransform', transitions));
+  scene.atoms.push(variableTrigger('VariableMixer', transitions));
 
   transitions.forEach(t => {
     let morph = startMorphs.find(m => m.name === t.receiverTargetName);
@@ -55,9 +56,8 @@ function saveScene() {
     else
       startMorphs.push({ name: t.receiverTargetName, animatable: 'true' });
   });
-  console.log(transitions);
 
-  userSaveScene(model.scene);
+  userSaveScene(scene);
 }
 
 // ### Utilities ###
@@ -80,7 +80,7 @@ function getMorphs(person) {
 }
 
 function variableTrigger(id, transitions) {
-  let vt = Object.assign({ id }, varTrigger);
+  let vt = Object.assign(deepClone(varTrigger), { id });
   vt.storables[0].trigger.transitionActions = transitions;
   return vt;
 }
