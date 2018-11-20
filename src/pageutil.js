@@ -9,6 +9,12 @@ function settingsFromForm( UIForm ){
     if( isNaN( parseFloat(value) ) === false ){
       settings[ key ] = parseFloat( value );
     }
+    else if(value=='on'){
+      settings[key] = true;
+    }
+    else if(value=='off'){
+      settings[key] = false;
+    }
     else{
       settings[ key ] = value;
     }

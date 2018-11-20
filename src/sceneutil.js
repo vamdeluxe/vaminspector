@@ -73,10 +73,10 @@ function saveScene( scene, callback ){
 }
 
 function openFiles( options = {} ){
-  const { multiSelection = true, extensions = ['json','jpg'] } = options;
+  const { multiSelection = true, extensions = ['json','jpg'], openDirectory = false } = options;
   return new Promise(function( resolve, reject ){
     require('electron').remote.dialog.showOpenDialog({
-      properties: ['openFile', multiSelection ? 'multiSelections' : ''],
+      properties: ['openFile', multiSelection ? 'multiSelections' : '', openDirectory ? 'openDirectory' : ''],
       title: 'Open',
       filters: [
         { name: 'VAM JSON', extensions }

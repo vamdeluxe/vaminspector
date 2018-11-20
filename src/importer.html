@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>VAM Scene Inspector</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+  </head>
+  <body>
+    <script src="importer.js" defer></script>
+    <div>
+      <div align="center">
+          <h1>VAC Importer</h1>
+      </div>
+
+      <button type="file" id="setPath">Set Path to VAM</button>
+      <button type="file" id="loadScene">Select VAC</button>
+
+      <div id="loadedSave" class="instructions"></div>
+
+      <button type="file" id="import" class="mainAction" disabled>Import</button>
+
+      <form id="importOptions">
+
+        <label><input type="checkbox" name="allowOverwrite">Allow Overwrite</label><br>
+
+        <fieldset id="appearanceSet">
+          <label class="titleLabel">People</label>
+          <nav>
+            <ul id="appearanceList">
+            </ul>
+          </nav>
+
+          <label><input type="checkbox" name="importJSON" checked>Import Appearances<br></label>
+          <input type="button" value="Select All">
+          <input type="button" value="Select None">
+        </fieldset>
+
+        <fieldset id="morphSet">
+          <label class="titleLabel">Morphs</label>
+          <nav>
+            <ul id="morphsList">
+            </ul>
+          </nav>
+
+          <div class="contentFrame">
+            <label><input type="checkbox" name="importMorphs" checked>Import Morphs<br></label>
+            <label><input type="checkbox" name="importDuplicateMorphs">Allow Duplicates<br></label>
+            <input type="button" value="Select All">
+            <input type="button" value="Select None">
+            <label class="smallLabel"><input type="text" name="morphSubfolder" id="morphSubfolder"><br>Import morphs not already in a subfolder to this subfolder (within Imports/etc) (or leave blank)</label>
+          </div>
+        </fieldset>
+
+        <fieldset id="textureSet">
+          <label class="titleLabel">Textures</label>
+          <nav>
+            <ul id="texturesList">
+            </ul>
+          </nav>
+
+          <label><input type="checkbox" name="importTextures" checked>Import Textures<br></label>
+          <input type="button" value="Select All">
+          <input type="button" value="Select None">
+
+          <label class="smallLabel"><input type="text" name="textureSubfolder" id="textureSubfolder"><br>Import textures in this subfolder (or leave blank)</label>
+        </fieldset>
+
+<!--
+        <fieldset>
+          <label>Scripts</label>
+          <nav>
+            <ul id="scriptsList">
+            </ul>
+          </nav>
+
+          <input type="checkbox" name="importScripts" checked>Import Scripts<br>
+          <input type="button" value="Select All">
+          <input type="button" value="Select None">
+        </fieldset>
+
+-->
+
+      </form>
+
+    </div>
+
+    <div id="logMenu" class="logBack" style="display:none">
+      <nav class="logBox">
+        <input type="button" value="Close" onclick="this.parentNode.parentNode.style.display = 'none';">
+        <ul id="log">
+        </ul>
+      </nav>
+    </div>
+  </body>
+</html>
