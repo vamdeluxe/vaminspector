@@ -222,7 +222,7 @@ PageUtil.UIButtonClicked('#loadScene', function(){
 
       });
 
-      console.log(UIAppearanceList.children.length);
+      // console.log(UIAppearanceList.children.length);
       UIAppearanceSet.style.display = 'block';
       if(UIMorphsList.children.length>0){
         UIMorphSet.style.display = 'block';
@@ -267,7 +267,9 @@ UIImportButton.onclick = function(){
 
     //  a bit hacky to get imported people but...
     if(key.indexOf('rename_')>=0){
-      const person = sceneJSON.atoms.find(SceneUtil.findById('Person'));
+      const personName = key.replace('rename_','');
+      // console.log(personName);
+      const person = sceneJSON.atoms.find(SceneUtil.findById(personName));
       const newName = options[key];
       const path = appearancePath + '/' + newName + '/' + newName + '.json';
 
